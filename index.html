@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>News-Wave</title>
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" onclick="reload()">
+          <!-- <p>News <span>wave</span></p> -->
+          <img src="./logo.png" alt="" class="logo" />
+        </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li
+              class="hover-link nav-item"
+              id="cricket"
+              onclick="onNavClick('cricket')"
+            >
+              Cricket
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="Technology"
+              onclick="onNavClick('Technology')"
+            >
+              Technology
+            </li>
+            <li
+              class="hover-link nav-item"
+              id="Politics"
+              onclick="onNavClick('Politics')"
+            >
+              Politics
+            </li>
+
+            <li
+              class="hover-link nav-item"
+              id="Education"
+              onclick="onNavClick('Education')"
+            >
+              Education
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar">
+          <input
+            type="text"
+            class="news-input"
+            id="search-text"
+            placeholder="eg. Sports"
+          />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img src="https://via.placeholder.com/400x200" alt="" id="news-img" />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is Title</h3>
+          <h6 id="news-source" class="news-source">End gadget 29/08/23</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+            numquam accusamus at excepturi impedit temporibus, molestiae
+            reiciendis fuga fugit quis.
+          </p>
+        </div>
+      </div>
+    </template>
+    <footer>
+      <p>Developed with &nbsp; <span style="color: rgb(239 68 68)"> ❤ </span> &nbsp; By Mangesh  <a href="https://github.com/mangeshsali/Sorting_visualizer"><i class="fa-brands fa-github link"></a></i> 
+        <a href="https://www.linkedin.com/in/mangesh-sali-535b55224/"><i class="fa-brands fa-linkedin link"></a></i></p> 
+    </footer>
+    <script src="https://kit.fontawesome.com/314c857e26.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
