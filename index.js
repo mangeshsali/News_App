@@ -1,13 +1,16 @@
 const API_KEY = "06c9b01a746e48ff8ce192f7a094faa4";
 const url = "https://newsapi.org/v2/everything?q=";
-
+const startDate = "2023-08-02";
+const toDate = "2023-07-05";
 window.addEventListener("load", () => fetchNews("Latest News"));
 
 function reload() {
   window.location.reload();
 }
 async function fetchNews(query) {
-  const res = await fetch(`${url}${query}&apikey=${API_KEY}`);
+  const res = await fetch(
+    `${url}${query}&from=${startDate}&to=${toDate}&sortBy=publishedAt&apikey=${API_KEY}`
+  );
   const data = await res.json();
   bindData(data.articles);
 }
@@ -35,15 +38,24 @@ function fillDataCard(cardClone, article) {
   newsTitle.innerHTML = article.title;
   newsDesc.innerHTML = article.description;
 
-  const date = new Date(article.publishedAt).toLocaleString("en-US", {
-    timeZone: "Asia/Jakarta",
-  });
-  newsSource.innerHTML = `${article.source.name} ∙ ${date}`;
+  const date = new Date(article.publishedAt);
+  const options = {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  };
+  const formattedDate = date.toLocaleString("en-US", options);
+  newsSource.innerHTML = `${article.source.name} ∙ ${formattedDate}`;
+
   cardClone.firstElementChild.addEventListener("click", () => {
     window.open(article.url, "_blank");
   });
 }
+
 let curSelectedNav = null;
+
 function onNavClick(id) {
   fetchNews(id);
   const navItem = document.getElementById(id);
@@ -51,6 +63,7 @@ function onNavClick(id) {
   curSelectedNav = navItem;
   curSelectedNav.classList.add("active");
 }
+
 const SearchButton = document.getElementById("search-button");
 const SearchText = document.getElementById("search-text");
 SearchButton.addEventListener("click", () => {
