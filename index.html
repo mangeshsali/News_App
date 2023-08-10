@@ -46,6 +46,18 @@
             </li>
           </ul>
         </div>
+
+        <div class="language-select-container">
+          <select class="language-select" onchange="onNavClick(this.value)">
+            <option>Select Language</option>
+            <option value="marathi">Marathi</option>
+            <option value="
+हिंदी">Hindi</option>
+          </select>
+        </div>
+        
+        
+
         <div class="search-bar">
           <input
             type="text"
@@ -58,9 +70,27 @@
       </div>
     </nav>
 
+    <div class="side-bar">
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item" onclick="onNavClick('भारत')"><i class="fa-brands fa-slack"></i> राष्ट्रीय समाचार</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('अंतरराष्ट्रीय')"><i class="fa-solid fa-globe"></i> अंतरराष्ट्रीय समाचार</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('राजनीति')"> <i class="fa-solid fa-landmark-dome"></i> राजनीति</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('व्यापार')"><i class="fa-solid fa-money-bill-trend-up"></i> व्यापार</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('मनोरंजन')"> <i class="fa-solid fa-masks-theater"></i> मनोरंजन</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('खेल')"><i class="fa-solid fa-gamepad"></i> खेल</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('समाज')"> <i class="fa-duotone fa-hashtag"></i> समाज</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('स्वास्थ्य')"><i class="fa-solid fa-user-doctor"></i> स्वास्थ्य</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('विज्ञान')"><i class="fa-solid fa-flask-vial"></i> विज्ञान</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('क्राइम')"><i class="fa-solid fa-hat-cowboy"></i> क्राइम</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('शिक्षा')"><i class="fa-solid fa-book-open-reader"></i> शिक्षा</li>
+        <li class="sidebar-menu-item" onclick="onNavClick('विशेष रिपोर्ट')"><i class="fa-light fa-newspaper"></i> विशेष रिपोर्ट</li>
+      </ul>
+       </div>
+    
     <main>
       <div class="cards-container container flex" id="cards-container"></div>
     </main>
+
 
     <template id="template-news-card">
       <div class="card">
@@ -78,6 +108,9 @@
         </div>
       </div>
     </template>
+
+
+    
     <footer>
       <p>Developed with &nbsp; <span style="color: rgb(239 68 68)"> ❤ </span> &nbsp; By Mangesh  <a href="https://github.com/mangeshsali/Sorting_visualizer"><i class="fa-brands fa-github link"></a></i> 
         <a href="https://www.linkedin.com/in/mangesh-sali-535b55224/"><i class="fa-brands fa-linkedin link"></a></i></p> 

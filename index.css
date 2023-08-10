@@ -145,6 +145,55 @@ footer p {
   align-items: center;
   text-align: center;
 }
+
+li {
+  cursor: pointer;
+}
+
 footer i {
   color: #183b56;
+}
+
+.language-select-container {
+  display: inline-block;
+  margin: 10px;
+}
+
+.language-select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.language-select:hover {
+  border-color: #666;
+}
+
+.language-select:focus {
+  outline: none;
+  border-color: #428bca;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.side-bar {
+  position: fixed;
+  top: 10%;
+  left: 0%;
+  width: 13%;
+  height: 200vh;
+  background-color: #d1eafc50;
+  color: rgb(0, 0, 0);
+}
+.sidebar-menu-item {
+  padding: 20px 20px;
+}
+
+i {
+  margin-right: 10px;
 }

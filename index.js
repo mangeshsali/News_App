@@ -1,8 +1,8 @@
-const API_KEY = "06c9b01a746e48ff8ce192f7a094faa4";
+const API_KEY = "e61d45eecb56451c9562529cdffef974";
 const url = "https://newsapi.org/v2/everything?q=";
-const startDate = "2023-08-02";
-const toDate = "2023-07-05";
-window.addEventListener("load", () => fetchNews("Latest News"));
+const startDate = "2023-08-09";
+const toDate = "2023-07-20";
+window.addEventListener("load", () => fetchNews("India"));
 
 function reload() {
   window.location.reload();
