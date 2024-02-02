@@ -1,7 +1,7 @@
 const API_KEY = "e61d45eecb56451c9562529cdffef974";
 const url = "https://newsapi.org/v2/everything?q=";
-const startDate = "2023-08-09";
-const toDate = "2023-07-20";
+const startDate = "2024-02-01";
+const toDate = "2024-02-02";
 window.addEventListener("load", () => fetchNews("India"));
 
 function reload() {
@@ -27,6 +27,23 @@ function bindData(articles) {
     cardsContainer.appendChild(cardClone);
   });
 }
+
+// function bindData(articles) {
+//   const cardsContainer = document.getElementById("cards-container");
+//   const newsCardTemplate = document.getElementById("template-news-card");
+
+//   cardsContainer.innerHTML = "";
+
+//   const maxArticlesToShow = 2;
+//   for (let i = 0; i < Math.min(maxArticlesToShow, articles.length); i++) {
+//     const article = articles[i];
+//     if (!article.urlToImage) continue;
+
+//     const cardClone = newsCardTemplate.content.cloneNode(true);
+//     fillDataCard(cardClone, article);
+//     cardsContainer.appendChild(cardClone);
+//   }
+// }
 
 function fillDataCard(cardClone, article) {
   const newsImg = cardClone.querySelector("#news-img");
