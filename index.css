@@ -98,9 +98,12 @@ main {
   margin-top: 100px;
 }
 .cards-container {
-  justify-content: space-between;
+  justify-content: center;
+
+  /* justify-content: space-between; */
+
   flex-wrap: wrap;
-  row-gap: 20px;
+  gap: 20px;
   align-items: start;
 }
 .card {
@@ -196,4 +199,36 @@ footer i {
 
 i {
   margin-right: 10px;
+}
+/* Add this to your existing CSS */
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  /* Adjust the main navigation for small screens */
+  nav .main-nav {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  nav .nav-links {
+    margin-top: 10px;
+  }
+
+  /* Adjust the sidebar for small screens */
+  .side-bar {
+    display: none;
+  }
+
+  /* Adjust the cards container for small screens */
+  main .cards-container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Adjust the news card for small screens */
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
 }
